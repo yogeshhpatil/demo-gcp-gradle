@@ -7,6 +7,6 @@ steps:
     entrypoint: gradle
     args: ["assemble"]
   - name: gcr.io/cloud-builders/docker
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/demo-gcp-2, "--build-arg=JAR_FILE=build/libs/demo-gcp-2-0.0.1.jar", "."]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/demo-gcp-2", "--build-arg=JAR_FILE=build/libs/demo-gcp-2-0.0.1.jar", "."]
 images: ["gcr.io/$PROJECT_ID/demo-gcp-2"]
 # [END gcloud build gradle]
