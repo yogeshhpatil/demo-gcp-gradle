@@ -31,8 +31,11 @@ public class DBController {
 			log.info("Service 1 returning customer ... {}",c);
 			return c;
 		}
-		
-		return null;
+		try {
+        		throw new RuntimeException("Customer details not found");
+        	} catch(Exception e) {
+            		log.error("logging error : {}", e);
+        	} 
 	}
 	
 	@GetMapping("/get/allcustomer")
