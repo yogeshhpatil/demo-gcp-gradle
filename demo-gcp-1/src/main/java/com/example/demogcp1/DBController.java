@@ -36,6 +36,7 @@ public class DBController {
         	} catch(Exception e) {
             		log.error("logging error : {}", e);
         	} 
+		return null;
 	}
 	
 	@GetMapping("/get/allcustomer")
