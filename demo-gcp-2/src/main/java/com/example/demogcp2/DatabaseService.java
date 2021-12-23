@@ -15,6 +15,10 @@ public class DatabaseService {
 		return dbServiceClient.getCustomers();
 	}
 
+	public Customer findCustomerById(Integer id) {	
+		return dbServiceClient.getCustomerById(id);
+	}
+	
 	public void save(Customer customer) {
 		dbServiceClient.saveCustomer(customer);
 	}
