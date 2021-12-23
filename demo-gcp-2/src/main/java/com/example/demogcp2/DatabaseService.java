@@ -15,7 +15,7 @@ public class DatabaseService {
 		return dbServiceClient.getCustomers();
 	}
 
-	public Customer findCustomerById(Integer id) {	
+	public Customer findCustomerById(Long id) {	
 		return dbServiceClient.getCustomerById(id);
 	}
 	
