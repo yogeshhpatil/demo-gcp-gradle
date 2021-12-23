@@ -50,7 +50,7 @@ class UserSvcRestController {
 	}
 	
 	@GetMapping("/get/customer/{id}")
-	public Customer getCustomerDetails(@PathVariable Integer id) {
+	public Customer getCustomerDetails(@PathVariable Long id) {
 		log.info("Service 2 /get/customer/{id} called..");
 		return databaseService.findCustomerById(id);
 	}
