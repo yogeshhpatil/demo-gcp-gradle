@@ -49,6 +49,12 @@ class UserSvcRestController {
 		return databaseService.findAllCustomer();
 	}
 	
+	@GetMapping("/get/customer/{id}")
+	public List<Customer> getCustomerDetails(@PathVariable Integer id) {
+		log.info("Service 2 /get/customer/{id} called..");
+		return databaseService.findCustomerById(id);
+	}
+	
 	@PostMapping("/add/customer")
 	public void addContent(@RequestBody Customer customer) {
 		databaseService.save(customer);
